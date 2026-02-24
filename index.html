@@ -109,265 +109,427 @@
             </div>
         </section>
 
-        <!-- 3. Main Itinerary Table -->
+        <!-- 3. Main Itinerary Table (Card-Based for Mobile) -->
         <section class="mb-12">
             <div class="flex items-center justify-between mb-4">
                 <h2 class="text-2xl font-bold text-slate-800"><i class="far fa-calendar-check mr-2 text-slate-400"></i> 每日行程表</h2>
-                <span class="text-xs bg-slate-100 text-slate-500 px-2 py-1 rounded">Scroll to view</span>
             </div>
             
-            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden overflow-x-auto custom-scrollbar">
-                <table class="w-full text-left border-collapse min-w-[800px]">
-                    <thead>
-                        <tr class="bg-slate-50 border-b border-slate-200 text-slate-500 text-xs uppercase tracking-wider">
-                            <th class="p-4 w-16 text-center font-bold">Date</th>
-                            <th class="p-4 w-12 text-center font-bold">Day</th>
-                            <th class="p-4 w-20 text-center font-bold">City</th>
-                            <th class="p-4 w-24 text-center font-bold">Type</th>
-                            <th class="p-4 font-bold">Highlights & Logistics</th>
-                            <th class="p-4 w-32 font-bold">Stay</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-slate-100 text-sm">
-                        <!-- 3/28 -->
-                        <tr class="hover:bg-slate-50 transition-colors group">
-                            <td class="p-4 text-center font-mono font-bold text-blue-600">03/28</td>
-                            <td class="p-4 text-center text-red-500 font-bold">Sat</td>
-                            <td class="p-4 text-center text-slate-600 font-medium">全州</td>
-                            <td class="p-4 text-center"><span class="inline-block px-2 py-1 bg-yellow-100 text-yellow-700 rounded-md text-xs font-bold">紅眼移動</span></td>
-                            <td class="p-4">
-                                <div class="flex items-start gap-3">
-                                    <div class="mt-1 min-w-[20px] text-center"><i class="fas fa-plane text-slate-400"></i></div>
-                                    <div>
-                                        <div class="font-bold text-slate-800">TPE 02:35 ➔ CJJ 06:05 (易斯達)</div>
-                                        <div class="text-slate-500 mt-1 space-y-1">
-                                            <p class="font-bold text-green-600 bg-green-50 px-2 py-1 rounded-md inline-block mb-1"><i class="fas fa-check-circle"></i> 3/27 22:00 Aeroride 台中接送 (已預約)</p>
-                                            <p class="text-xs mb-1"><span class="bg-yellow-100 text-yellow-800 px-1 rounded">貴賓室</span> Plaza Premium Lounge (Zone D)</p>
-                                            <p>🚕 07:00 清州機場 ➔ 市外巴士站 (20分)</p>
-                                            <p>🚌 07:30 轉乘巴士 ➔ 全州 (1.5hr)</p>
-                                            <p>🚕 09:30 抵飯店寄行李 ➔ <strong>Tip: 找汗蒸幕補眠/吃早午餐</strong></p>
-                                        </div>
-                                    </div>
+            <div class="space-y-3">
+                
+                <!-- 03/28 -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col sm:flex-row relative hover:shadow-md transition-shadow">
+                    <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-yellow-400"></div>
+                    <div class="bg-slate-50/50 w-full sm:w-36 flex sm:flex-col justify-between sm:justify-start items-center sm:items-start p-3 sm:p-4 border-b sm:border-b-0 sm:border-r border-slate-100 pl-4 sm:pl-5">
+                        <div class="flex items-baseline gap-2 sm:block">
+                            <div class="font-mono font-bold text-xl text-blue-600 tracking-tight">03/28</div>
+                            <div class="text-xs font-bold text-red-500 uppercase">Sat</div>
+                        </div>
+                        <div class="flex items-center gap-2 sm:mt-2">
+                            <span class="text-sm font-bold text-slate-600">全州</span>
+                            <span class="px-2 py-0.5 bg-yellow-100 text-yellow-700 rounded text-[10px] font-bold">紅眼移動</span>
+                        </div>
+                    </div>
+                    <div class="p-4 sm:p-5 flex-1">
+                        <div class="flex items-start gap-3">
+                            <div class="mt-0.5 text-center w-5 shrink-0"><i class="fas fa-plane text-slate-400"></i></div>
+                            <div>
+                                <div class="font-bold text-slate-800 text-base mb-1.5 leading-snug">TPE 02:35 ➔ CJJ 06:05 (易斯達)</div>
+                                <div class="text-slate-600 text-sm space-y-1.5 leading-relaxed">
+                                    <p><span class="font-bold text-green-700 bg-green-50 px-2 py-0.5 rounded-md inline-flex items-center gap-1"><i class="fas fa-check-circle text-green-500"></i> 3/27 22:00 Aeroride 台中接送 (已預約)</span></p>
+                                    <p><span class="bg-yellow-100 text-yellow-800 px-1.5 py-0.5 rounded text-[10px] font-bold mr-1">貴賓室</span> Plaza Premium Lounge (Zone D)</p>
+                                    <p>🚕 07:00 清州機場 ➔ 市外巴士站 (20分)</p>
+                                    <p>🚌 07:30 轉乘巴士 ➔ 全州 (1.5hr)</p>
+                                    <p>🚕 09:30 抵飯店寄行李 ➔ <strong class="text-slate-700">Tip: 找汗蒸幕補眠/吃早午餐</strong></p>
                                 </div>
-                            </td>
-                            <td class="p-4 font-medium text-slate-700 border-l border-slate-50 group-hover:border-slate-200">LABE Hotel</td>
-                        </tr>
-                        <!-- 3/29 -->
-                        <tr class="hover:bg-slate-50 transition-colors group">
-                            <td class="p-4 text-center font-mono font-bold text-slate-600">03/29</td>
-                            <td class="p-4 text-center text-red-500 font-bold">Sun</td>
-                            <td class="p-4 text-center text-slate-600 font-medium">全州</td>
-                            <td class="p-4 text-center"><span class="inline-block px-2 py-1 bg-green-100 text-green-700 rounded-md text-xs font-bold">假日</span></td>
-                            <td class="p-4">
-                                <div class="font-bold text-green-700 mb-1">🌳 全州週末慢活 (補足精神)</div>
-                                <div class="text-slate-500">🦆 德津公園踩天鵝船 / ☕ 客舍路探訪文青咖啡廳</div>
-                            </td>
-                            <td class="p-4 font-medium text-slate-700 border-l border-slate-50 group-hover:border-slate-200">LABE Hotel</td>
-                        </tr>
-                        <!-- 3/30 -->
-                        <tr class="hover:bg-slate-50 transition-colors group">
-                            <td class="p-4 text-center font-mono font-bold text-slate-600">03/30</td>
-                            <td class="p-4 text-center text-slate-400 font-bold">Mon</td>
-                            <td class="p-4 text-center text-slate-600 font-medium">全州</td>
-                            <td class="p-4 text-center"><span class="inline-block px-2 py-1 bg-slate-100 text-slate-600 rounded-md text-xs font-bold">工作</span></td>
-                            <td class="p-4">
-                                <div class="font-bold text-slate-700 mb-1">💻 遠端工作 (09:00-18:00)</div>
-                                <div class="text-slate-500">🌙 慶基殿石牆路散步 (下班後)</div>
-                            </td>
-                            <td class="p-4 font-medium text-slate-700 border-l border-slate-50 group-hover:border-slate-200">LABE Hotel</td>
-                        </tr>
-                        <!-- 3/31 -->
-                        <tr class="hover:bg-slate-50 transition-colors group">
-                            <td class="p-4 text-center font-mono font-bold text-slate-600">03/31</td>
-                            <td class="p-4 text-center text-slate-400 font-bold">Tue</td>
-                            <td class="p-4 text-center text-slate-600 font-medium">全州</td>
-                            <td class="p-4 text-center"><span class="inline-block px-2 py-1 bg-slate-100 text-slate-600 rounded-md text-xs font-bold">工作</span></td>
-                            <td class="p-4">
-                                <div class="font-bold text-slate-700 mb-1">💻 遠端工作 (09:00-18:00)</div>
-                                <div class="text-slate-500">🌙 全州川沿岸櫻花隧道散步</div>
-                            </td>
-                            <td class="p-4 font-medium text-slate-700 border-l border-slate-50 group-hover:border-slate-200">LABE Hotel</td>
-                        </tr>
-                        <!-- 4/01 -->
-                        <tr class="hover:bg-slate-50 transition-colors group bg-red-50/30">
-                            <td class="p-4 text-center font-mono font-bold text-red-600">04/01</td>
-                            <td class="p-4 text-center text-red-500 font-bold">Wed</td>
-                            <td class="p-4 text-center text-slate-600 font-medium">全州</td>
-                            <td class="p-4 text-center"><span class="inline-block px-2 py-1 bg-red-100 text-red-600 rounded-md text-xs font-bold">特休</span></td>
-                            <td class="p-4">
-                                <div class="font-bold text-red-700 mb-1">🌸 鎮安 馬耳山 (Maisan) 櫻花隧道</div>
-                                <div class="text-slate-600 text-xs space-y-1">
-                                    <p>🚕 交通：搭計程車去市外巴士站轉乘 (單程約50分)</p>
-                                    <p>📸 亮點：2.5km 夢幻櫻花路 & 神秘塔寺</p>
-                                    <p>🐷 午餐：必吃鎮安黑豬肉</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-slate-50 w-full sm:w-32 p-3 sm:p-4 border-t sm:border-t-0 sm:border-l border-slate-100 flex flex-row sm:flex-col justify-between sm:justify-center items-center sm:items-end shrink-0">
+                        <div class="text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-0 sm:mb-1">Stay</div>
+                        <div class="font-bold text-sm text-slate-700 text-right">LABE Hotel</div>
+                    </div>
+                </div>
+
+                <!-- 03/29 -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col sm:flex-row relative hover:shadow-md transition-shadow">
+                    <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-green-400"></div>
+                    <div class="bg-slate-50/50 w-full sm:w-36 flex sm:flex-col justify-between sm:justify-start items-center sm:items-start p-3 sm:p-4 border-b sm:border-b-0 sm:border-r border-slate-100 pl-4 sm:pl-5">
+                        <div class="flex items-baseline gap-2 sm:block">
+                            <div class="font-mono font-bold text-xl text-slate-700 tracking-tight">03/29</div>
+                            <div class="text-xs font-bold text-red-500 uppercase">Sun</div>
+                        </div>
+                        <div class="flex items-center gap-2 sm:mt-2">
+                            <span class="text-sm font-bold text-slate-600">全州</span>
+                            <span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-[10px] font-bold">假日</span>
+                        </div>
+                    </div>
+                    <div class="p-4 sm:p-5 flex-1">
+                        <div class="font-bold text-green-700 text-base mb-1.5 leading-snug">🌳 全州週末慢活 (補足精神)</div>
+                        <div class="text-slate-600 text-sm leading-relaxed">🦆 德津公園踩天鵝船 / ☕ 客舍路探訪文青咖啡廳</div>
+                    </div>
+                    <div class="bg-slate-50 w-full sm:w-32 p-3 sm:p-4 border-t sm:border-t-0 sm:border-l border-slate-100 flex flex-row sm:flex-col justify-between sm:justify-center items-center sm:items-end shrink-0">
+                        <div class="text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-0 sm:mb-1">Stay</div>
+                        <div class="font-bold text-sm text-slate-700 text-right">LABE Hotel</div>
+                    </div>
+                </div>
+
+                <!-- 03/30 -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col sm:flex-row relative hover:shadow-md transition-shadow">
+                    <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-slate-400"></div>
+                    <div class="bg-slate-50/50 w-full sm:w-36 flex sm:flex-col justify-between sm:justify-start items-center sm:items-start p-3 sm:p-4 border-b sm:border-b-0 sm:border-r border-slate-100 pl-4 sm:pl-5">
+                        <div class="flex items-baseline gap-2 sm:block">
+                            <div class="font-mono font-bold text-xl text-slate-700 tracking-tight">03/30</div>
+                            <div class="text-xs font-bold text-slate-400 uppercase">Mon</div>
+                        </div>
+                        <div class="flex items-center gap-2 sm:mt-2">
+                            <span class="text-sm font-bold text-slate-600">全州</span>
+                            <span class="px-2 py-0.5 bg-slate-100 text-slate-600 rounded text-[10px] font-bold">工作</span>
+                        </div>
+                    </div>
+                    <div class="p-4 sm:p-5 flex-1">
+                        <div class="font-bold text-slate-700 text-base mb-1.5 leading-snug">💻 遠端工作 (09:00-18:00)</div>
+                        <div class="text-slate-500 text-sm leading-relaxed">🌙 慶基殿石牆路散步 (下班後)</div>
+                    </div>
+                    <div class="bg-slate-50 w-full sm:w-32 p-3 sm:p-4 border-t sm:border-t-0 sm:border-l border-slate-100 flex flex-row sm:flex-col justify-between sm:justify-center items-center sm:items-end shrink-0">
+                        <div class="text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-0 sm:mb-1">Stay</div>
+                        <div class="font-bold text-sm text-slate-700 text-right">LABE Hotel</div>
+                    </div>
+                </div>
+
+                <!-- 03/31 -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col sm:flex-row relative hover:shadow-md transition-shadow">
+                    <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-slate-400"></div>
+                    <div class="bg-slate-50/50 w-full sm:w-36 flex sm:flex-col justify-between sm:justify-start items-center sm:items-start p-3 sm:p-4 border-b sm:border-b-0 sm:border-r border-slate-100 pl-4 sm:pl-5">
+                        <div class="flex items-baseline gap-2 sm:block">
+                            <div class="font-mono font-bold text-xl text-slate-700 tracking-tight">03/31</div>
+                            <div class="text-xs font-bold text-slate-400 uppercase">Tue</div>
+                        </div>
+                        <div class="flex items-center gap-2 sm:mt-2">
+                            <span class="text-sm font-bold text-slate-600">全州</span>
+                            <span class="px-2 py-0.5 bg-slate-100 text-slate-600 rounded text-[10px] font-bold">工作</span>
+                        </div>
+                    </div>
+                    <div class="p-4 sm:p-5 flex-1">
+                        <div class="font-bold text-slate-700 text-base mb-1.5 leading-snug">💻 遠端工作 (09:00-18:00)</div>
+                        <div class="text-slate-500 text-sm leading-relaxed">🌙 全州川沿岸櫻花隧道散步</div>
+                    </div>
+                    <div class="bg-slate-50 w-full sm:w-32 p-3 sm:p-4 border-t sm:border-t-0 sm:border-l border-slate-100 flex flex-row sm:flex-col justify-between sm:justify-center items-center sm:items-end shrink-0">
+                        <div class="text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-0 sm:mb-1">Stay</div>
+                        <div class="font-bold text-sm text-slate-700 text-right">LABE Hotel</div>
+                    </div>
+                </div>
+
+                <!-- 04/01 -->
+                <div class="bg-red-50/30 rounded-xl shadow-sm border border-red-100 overflow-hidden flex flex-col sm:flex-row relative hover:shadow-md transition-shadow">
+                    <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-red-400"></div>
+                    <div class="bg-white/50 w-full sm:w-36 flex sm:flex-col justify-between sm:justify-start items-center sm:items-start p-3 sm:p-4 border-b sm:border-b-0 sm:border-r border-red-100 pl-4 sm:pl-5">
+                        <div class="flex items-baseline gap-2 sm:block">
+                            <div class="font-mono font-bold text-xl text-red-600 tracking-tight">04/01</div>
+                            <div class="text-xs font-bold text-red-500 uppercase">Wed</div>
+                        </div>
+                        <div class="flex items-center gap-2 sm:mt-2">
+                            <span class="text-sm font-bold text-slate-600">全州</span>
+                            <span class="px-2 py-0.5 bg-red-100 text-red-600 rounded text-[10px] font-bold">特休</span>
+                        </div>
+                    </div>
+                    <div class="p-4 sm:p-5 flex-1">
+                        <div class="font-bold text-red-700 text-base mb-1.5 leading-snug">🌸 鎮安 馬耳山 (Maisan) 櫻花隧道</div>
+                        <div class="text-slate-600 text-sm space-y-1.5 leading-relaxed">
+                            <p>🚕 交通：搭計程車去市外巴士站轉乘 (單程約50分)</p>
+                            <p>📸 亮點：2.5km 夢幻櫻花路 & 神秘塔寺</p>
+                            <p>🐷 午餐：必吃鎮安黑豬肉</p>
+                        </div>
+                    </div>
+                    <div class="bg-white/50 w-full sm:w-32 p-3 sm:p-4 border-t sm:border-t-0 sm:border-l border-red-100 flex flex-row sm:flex-col justify-between sm:justify-center items-center sm:items-end shrink-0">
+                        <div class="text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-0 sm:mb-1">Stay</div>
+                        <div class="font-bold text-sm text-slate-700 text-right">LABE Hotel</div>
+                    </div>
+                </div>
+
+                <!-- 04/02 -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col sm:flex-row relative hover:shadow-md transition-shadow">
+                    <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-slate-400"></div>
+                    <div class="bg-slate-50/50 w-full sm:w-36 flex sm:flex-col justify-between sm:justify-start items-center sm:items-start p-3 sm:p-4 border-b sm:border-b-0 sm:border-r border-slate-100 pl-4 sm:pl-5">
+                        <div class="flex items-baseline gap-2 sm:block">
+                            <div class="font-mono font-bold text-xl text-slate-700 tracking-tight">04/02</div>
+                            <div class="text-xs font-bold text-slate-400 uppercase">Thu</div>
+                        </div>
+                        <div class="flex items-center gap-2 sm:mt-2">
+                            <span class="text-sm font-bold text-slate-600">全州</span>
+                            <span class="px-2 py-0.5 bg-slate-100 text-slate-600 rounded text-[10px] font-bold">工作</span>
+                        </div>
+                    </div>
+                    <div class="p-4 sm:p-5 flex-1">
+                        <div class="font-bold text-slate-700 text-base mb-1.5 leading-snug">💻 遠端工作 (09:00-18:00)</div>
+                        <div class="text-slate-500 text-sm leading-relaxed">🌙 南部市場 / 青年路文創店 <strong>(청년몰)</strong></div>
+                    </div>
+                    <div class="bg-slate-50 w-full sm:w-32 p-3 sm:p-4 border-t sm:border-t-0 sm:border-l border-slate-100 flex flex-row sm:flex-col justify-between sm:justify-center items-center sm:items-end shrink-0">
+                        <div class="text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-0 sm:mb-1">Stay</div>
+                        <div class="font-bold text-sm text-slate-700 text-right">LABE Hotel</div>
+                    </div>
+                </div>
+
+                <!-- 04/03 -->
+                <div class="bg-pink-50/30 rounded-xl shadow-sm border border-pink-100 overflow-hidden flex flex-col sm:flex-row relative hover:shadow-md transition-shadow">
+                    <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-pink-400"></div>
+                    <div class="bg-white/50 w-full sm:w-36 flex sm:flex-col justify-between sm:justify-start items-center sm:items-start p-3 sm:p-4 border-b sm:border-b-0 sm:border-r border-pink-100 pl-4 sm:pl-5">
+                        <div class="flex items-baseline gap-2 sm:block">
+                            <div class="font-mono font-bold text-xl text-pink-600 tracking-tight">04/03</div>
+                            <div class="text-xs font-bold text-red-500 uppercase">Fri</div>
+                        </div>
+                        <div class="flex items-center gap-2 sm:mt-2">
+                            <span class="text-sm font-bold text-slate-600">全州</span>
+                            <span class="px-2 py-0.5 bg-pink-100 text-pink-600 rounded text-[10px] font-bold">休假</span>
+                        </div>
+                    </div>
+                    <div class="p-4 sm:p-5 flex-1">
+                        <div class="font-bold text-pink-600 text-base mb-1.5 leading-snug">🌸 完山公園 (Wansan Park) 賞花海</div>
+                        <div class="text-slate-500 text-sm leading-relaxed">✨ 八重櫻盛開震撼美景 (續住超悠閒)</div>
+                    </div>
+                    <div class="bg-white/50 w-full sm:w-32 p-3 sm:p-4 border-t sm:border-t-0 sm:border-l border-pink-100 flex flex-row sm:flex-col justify-between sm:justify-center items-center sm:items-end shrink-0">
+                        <div class="text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-0 sm:mb-1">Stay</div>
+                        <div class="font-bold text-sm text-slate-700 text-right">LABE Hotel</div>
+                    </div>
+                </div>
+
+                <!-- 04/04 -->
+                <div class="bg-indigo-50/30 rounded-xl shadow-sm border border-indigo-100 overflow-hidden flex flex-col sm:flex-row relative hover:shadow-md transition-shadow">
+                    <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-indigo-400"></div>
+                    <div class="bg-white/50 w-full sm:w-36 flex sm:flex-col justify-between sm:justify-start items-center sm:items-start p-3 sm:p-4 border-b sm:border-b-0 sm:border-r border-indigo-100 pl-4 sm:pl-5">
+                        <div class="flex items-baseline gap-2 sm:block">
+                            <div class="font-mono font-bold text-xl text-indigo-600 tracking-tight">04/04</div>
+                            <div class="text-xs font-bold text-red-500 uppercase">Sat</div>
+                        </div>
+                        <div class="flex items-center gap-2 sm:mt-2">
+                            <span class="text-sm font-bold text-slate-600">移動</span>
+                            <span class="px-2 py-0.5 bg-blue-100 text-blue-700 rounded text-[10px] font-bold">飛機</span>
+                        </div>
+                    </div>
+                    <div class="p-4 sm:p-5 flex-1">
+                        <div class="flex items-start gap-3">
+                            <div class="mt-0.5 text-center w-5 shrink-0"><i class="fas fa-plane-departure text-indigo-500"></i></div>
+                            <div>
+                                <div class="font-bold text-indigo-800 text-base mb-1.5 leading-snug">韓日跨國移動 (清州直飛福岡)</div>
+                                <div class="text-slate-600 text-sm space-y-1.5 leading-relaxed">
+                                    <p>🚕 12:30 搭計程車前往「全州市外巴士站」</p>
+                                    <p>🕒 13:00 搭巴士 ➔ 清州機場 (約1.5hr)</p>
+                                    <p>🛫 航班：TW225 (17:05 ➔ 18:20)</p>
+                                    <p>🍜 晚餐：博多車站牛腸鍋</p>
                                 </div>
-                            </td>
-                            <td class="p-4 font-medium text-slate-700 border-l border-slate-50 group-hover:border-slate-200">LABE Hotel</td>
-                        </tr>
-                        <!-- 4/02 -->
-                        <tr class="hover:bg-slate-50 transition-colors group">
-                            <td class="p-4 text-center font-mono font-bold text-slate-600">04/02</td>
-                            <td class="p-4 text-center text-slate-400 font-bold">Thu</td>
-                            <td class="p-4 text-center text-slate-600 font-medium">全州</td>
-                            <td class="p-4 text-center"><span class="inline-block px-2 py-1 bg-slate-100 text-slate-600 rounded-md text-xs font-bold">工作</span></td>
-                            <td class="p-4">
-                                <div class="font-bold text-slate-700 mb-1">💻 遠端工作 (09:00-18:00)</div>
-                                <div class="text-slate-500">🌙 南部市場 / 青年路文創店 <strong>(청년몰)</strong></div>
-                            </td>
-                            <td class="p-4 font-medium text-slate-700 border-l border-slate-50 group-hover:border-slate-200">LABE Hotel</td>
-                        </tr>
-                        <!-- 4/03 -->
-                        <tr class="hover:bg-slate-50 transition-colors group bg-pink-50/30">
-                            <td class="p-4 text-center font-mono font-bold text-pink-600">04/03</td>
-                            <td class="p-4 text-center text-red-500 font-bold">Fri</td>
-                            <td class="p-4 text-center text-slate-600 font-medium">全州</td>
-                            <td class="p-4 text-center"><span class="inline-block px-2 py-1 bg-pink-100 text-pink-600 rounded-md text-xs font-bold">休假</span></td>
-                            <td class="p-4">
-                                <div class="font-bold text-pink-600 mb-1">🌸 完山公園 (Wansan Park) 賞花海</div>
-                                <div class="text-slate-500">✨ 八重櫻盛開震撼美景 (續住超悠閒)</div>
-                            </td>
-                            <td class="p-4 font-medium text-slate-700 border-l border-slate-50 group-hover:border-slate-200">LABE Hotel</td>
-                        </tr>
-                        <!-- 4/04 -->
-                        <tr class="hover:bg-slate-50 transition-colors group bg-indigo-50/30">
-                            <td class="p-4 text-center font-mono font-bold text-indigo-600">04/04</td>
-                            <td class="p-4 text-center text-red-500 font-bold">Sat</td>
-                            <td class="p-4 text-center text-slate-600 font-medium">移動</td>
-                            <td class="p-4 text-center"><span class="inline-block px-2 py-1 bg-blue-100 text-blue-700 rounded-md text-xs font-bold">飛機</span></td>
-                            <td class="p-4">
-                                <div class="flex items-start gap-3">
-                                    <div class="mt-1 min-w-[20px] text-center"><i class="fas fa-plane-departure text-indigo-400"></i></div>
-                                    <div>
-                                        <div class="font-bold text-indigo-800">韓日跨國移動 (清州直飛福岡)</div>
-                                        <div class="text-slate-500 text-xs mt-1 space-y-1">
-                                            <p>🚕 12:30 搭計程車前往「全州市外巴士站」</p>
-                                            <p>🕒 13:00 搭巴士 ➔ 清州機場 (約1.5hr)</p>
-                                            <p>🛫 航班：TW225 (17:05 ➔ 18:20)</p>
-                                            <p>🍜 晚餐：博多車站牛腸鍋</p>
-                                        </div>
-                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white/50 w-full sm:w-32 p-3 sm:p-4 border-t sm:border-t-0 sm:border-l border-indigo-100 flex flex-row sm:flex-col justify-between sm:justify-center items-center sm:items-end shrink-0">
+                        <div class="text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-0 sm:mb-1">Stay</div>
+                        <div class="font-bold text-sm text-purple-700 text-right">Comfort<br>Hakata</div>
+                    </div>
+                </div>
+
+                <!-- 04/05 -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col sm:flex-row relative hover:shadow-md transition-shadow">
+                    <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-purple-400"></div>
+                    <div class="bg-slate-50/50 w-full sm:w-36 flex sm:flex-col justify-between sm:justify-start items-center sm:items-start p-3 sm:p-4 border-b sm:border-b-0 sm:border-r border-slate-100 pl-4 sm:pl-5">
+                        <div class="flex items-baseline gap-2 sm:block">
+                            <div class="font-mono font-bold text-xl text-slate-700 tracking-tight">04/05</div>
+                            <div class="text-xs font-bold text-red-500 uppercase">Sun</div>
+                        </div>
+                        <div class="flex items-center gap-2 sm:mt-2">
+                            <span class="text-sm font-bold text-slate-600">福岡</span>
+                            <span class="px-2 py-0.5 bg-purple-100 text-purple-700 rounded text-[10px] font-bold">玩樂</span>
+                        </div>
+                    </div>
+                    <div class="p-4 sm:p-5 flex-1">
+                        <div class="font-bold text-purple-700 text-base mb-1.5 leading-snug">🛍️ 福岡市區賞櫻 & 購物</div>
+                        <div class="text-slate-500 text-sm leading-relaxed">舞鶴公園櫻花 / 天神地下街 / 中洲屋台</div>
+                    </div>
+                    <div class="bg-slate-50 w-full sm:w-32 p-3 sm:p-4 border-t sm:border-t-0 sm:border-l border-slate-100 flex flex-row sm:flex-col justify-between sm:justify-center items-center sm:items-end shrink-0">
+                        <div class="text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-0 sm:mb-1">Stay</div>
+                        <div class="font-bold text-sm text-purple-700 text-right">Comfort</div>
+                    </div>
+                </div>
+
+                <!-- 04/06 -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col sm:flex-row relative hover:shadow-md transition-shadow">
+                    <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-pink-400"></div>
+                    <div class="bg-slate-50/50 w-full sm:w-36 flex sm:flex-col justify-between sm:justify-start items-center sm:items-start p-3 sm:p-4 border-b sm:border-b-0 sm:border-r border-slate-100 pl-4 sm:pl-5">
+                        <div class="flex items-baseline gap-2 sm:block">
+                            <div class="font-mono font-bold text-xl text-slate-700 tracking-tight">04/06</div>
+                            <div class="text-xs font-bold text-red-500 uppercase">Mon</div>
+                        </div>
+                        <div class="flex items-center gap-2 sm:mt-2">
+                            <span class="text-sm font-bold text-slate-600">福岡</span>
+                            <span class="px-2 py-0.5 bg-pink-100 text-pink-600 rounded text-[10px] font-bold">補假</span>
+                        </div>
+                    </div>
+                    <div class="p-4 sm:p-5 flex-1">
+                        <div class="font-bold text-purple-700 text-base mb-1.5 leading-snug">🚣 柳川 (Yanagawa) 一日遊</div>
+                        <div class="text-slate-500 text-sm space-y-1.5 leading-relaxed">
+                            <p><span class="bg-yellow-100 text-yellow-800 px-1.5 py-0.5 rounded text-[10px] font-bold mr-1">套票</span> 西鐵柳川特惠套票 (Toku Toku)</p>
+                            <p>平日人少超清幽，午餐必吃蒸籠鰻魚飯</p>
+                        </div>
+                    </div>
+                    <div class="bg-slate-50 w-full sm:w-32 p-3 sm:p-4 border-t sm:border-t-0 sm:border-l border-slate-100 flex flex-row sm:flex-col justify-between sm:justify-center items-center sm:items-end shrink-0">
+                        <div class="text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-0 sm:mb-1">Stay</div>
+                        <div class="font-bold text-sm text-purple-700 text-right">Comfort</div>
+                    </div>
+                </div>
+
+                <!-- 04/07 -->
+                <div class="bg-red-50/30 rounded-xl shadow-sm border border-red-100 overflow-hidden flex flex-col sm:flex-row relative hover:shadow-md transition-shadow">
+                    <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-red-400"></div>
+                    <div class="bg-white/50 w-full sm:w-36 flex sm:flex-col justify-between sm:justify-start items-center sm:items-start p-3 sm:p-4 border-b sm:border-b-0 sm:border-r border-red-100 pl-4 sm:pl-5">
+                        <div class="flex items-baseline gap-2 sm:block">
+                            <div class="font-mono font-bold text-xl text-red-600 tracking-tight">04/07</div>
+                            <div class="text-xs font-bold text-slate-400 uppercase">Tue</div>
+                        </div>
+                        <div class="flex items-center gap-2 sm:mt-2">
+                            <span class="text-sm font-bold text-slate-600">熊本</span>
+                            <span class="px-2 py-0.5 bg-red-100 text-red-600 rounded text-[10px] font-bold">特休</span>
+                        </div>
+                    </div>
+                    <div class="p-4 sm:p-5 flex-1">
+                        <div class="font-bold text-red-700 text-base mb-1.5 leading-snug">🚂 九州鐵道慢旅 (停靠：鳥栖 / 久留米)</div>
+                        <div class="text-slate-600 text-sm space-y-1.5 leading-relaxed">
+                            <p>1. 博多➔鳥栖 (快速30分)：<strong>Outlet 購物</strong> (記得先寄行李)</p>
+                            <p>2. 鳥栖➔久留米 (快速7分)：<strong>吃大砲拉麵</strong></p>
+                            <p>3. 久留米➔熊本 (區間車1hr)：Check-in + 晚餐</p>
+                        </div>
+                    </div>
+                    <div class="bg-white/50 w-full sm:w-32 p-3 sm:p-4 border-t sm:border-t-0 sm:border-l border-red-100 flex flex-row sm:flex-col justify-between sm:justify-center items-center sm:items-end shrink-0">
+                        <div class="text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-0 sm:mb-1">Stay</div>
+                        <div class="font-bold text-sm text-red-700 text-right">& and Comfy</div>
+                    </div>
+                </div>
+
+                <!-- 04/08 -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col sm:flex-row relative hover:shadow-md transition-shadow">
+                    <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-slate-400"></div>
+                    <div class="bg-slate-50/50 w-full sm:w-36 flex sm:flex-col justify-between sm:justify-start items-center sm:items-start p-3 sm:p-4 border-b sm:border-b-0 sm:border-r border-slate-100 pl-4 sm:pl-5">
+                        <div class="flex items-baseline gap-2 sm:block">
+                            <div class="font-mono font-bold text-xl text-slate-700 tracking-tight">04/08</div>
+                            <div class="text-xs font-bold text-slate-400 uppercase">Wed</div>
+                        </div>
+                        <div class="flex items-center gap-2 sm:mt-2">
+                            <span class="text-sm font-bold text-slate-600">熊本</span>
+                            <span class="px-2 py-0.5 bg-slate-100 text-slate-600 rounded text-[10px] font-bold">工作</span>
+                        </div>
+                    </div>
+                    <div class="p-4 sm:p-5 flex-1">
+                        <div class="font-bold text-slate-700 text-base mb-1.5 leading-snug">🌅 晨間散步：沿坪井川長塀走 / 💻 Work & View</div>
+                        <div class="text-slate-500 text-sm leading-relaxed">☕ OMO5 熊本公共露台 / 🌃 熊本市役所夜景</div>
+                    </div>
+                    <div class="bg-slate-50 w-full sm:w-32 p-3 sm:p-4 border-t sm:border-t-0 sm:border-l border-slate-100 flex flex-row sm:flex-col justify-between sm:justify-center items-center sm:items-end shrink-0">
+                        <div class="text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-0 sm:mb-1">Stay</div>
+                        <div class="font-bold text-sm text-red-700 text-right">& and Comfy</div>
+                    </div>
+                </div>
+
+                <!-- 04/09 -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col sm:flex-row relative hover:shadow-md transition-shadow">
+                    <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-slate-400"></div>
+                    <div class="bg-slate-50/50 w-full sm:w-36 flex sm:flex-col justify-between sm:justify-start items-center sm:items-start p-3 sm:p-4 border-b sm:border-b-0 sm:border-r border-slate-100 pl-4 sm:pl-5">
+                        <div class="flex items-baseline gap-2 sm:block">
+                            <div class="font-mono font-bold text-xl text-slate-700 tracking-tight">04/09</div>
+                            <div class="text-xs font-bold text-slate-400 uppercase">Thu</div>
+                        </div>
+                        <div class="flex items-center gap-2 sm:mt-2">
+                            <span class="text-sm font-bold text-slate-600">熊本</span>
+                            <span class="px-2 py-0.5 bg-slate-100 text-slate-600 rounded text-[10px] font-bold">工作</span>
+                        </div>
+                    </div>
+                    <div class="p-4 sm:p-5 flex-1">
+                        <div class="font-bold text-slate-700 text-base mb-1.5 leading-snug">🌅 晨間散步：二之丸廣場 / 💻 Work & Vibe</div>
+                        <div class="text-slate-500 text-sm leading-relaxed">☕ 珈琲回廊 (烘豆坊) / 🏮 上乃裏通探店</div>
+                    </div>
+                    <div class="bg-slate-50 w-full sm:w-32 p-3 sm:p-4 border-t sm:border-t-0 sm:border-l border-slate-100 flex flex-row sm:flex-col justify-between sm:justify-center items-center sm:items-end shrink-0">
+                        <div class="text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-0 sm:mb-1">Stay</div>
+                        <div class="font-bold text-sm text-red-700 text-right">& and Comfy</div>
+                    </div>
+                </div>
+
+                <!-- 04/10 -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col sm:flex-row relative hover:shadow-md transition-shadow">
+                    <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-slate-400"></div>
+                    <div class="bg-slate-50/50 w-full sm:w-36 flex sm:flex-col justify-between sm:justify-start items-center sm:items-start p-3 sm:p-4 border-b sm:border-b-0 sm:border-r border-slate-100 pl-4 sm:pl-5">
+                        <div class="flex items-baseline gap-2 sm:block">
+                            <div class="font-mono font-bold text-xl text-slate-700 tracking-tight">04/10</div>
+                            <div class="text-xs font-bold text-slate-400 uppercase">Fri</div>
+                        </div>
+                        <div class="flex items-center gap-2 sm:mt-2">
+                            <span class="text-sm font-bold text-slate-600">熊本</span>
+                            <span class="px-2 py-0.5 bg-slate-100 text-slate-600 rounded text-[10px] font-bold">工作</span>
+                        </div>
+                    </div>
+                    <div class="p-4 sm:p-5 flex-1">
+                        <div class="font-bold text-slate-700 text-base mb-1.5 leading-snug">🌅 晨間散步：上通商店街 / 💻 Work & Chill</div>
+                        <div class="text-slate-500 text-sm leading-relaxed">☕ TSUTAYA 書店工作 / 🍻 熊本屋台村狂歡</div>
+                    </div>
+                    <div class="bg-slate-50 w-full sm:w-32 p-3 sm:p-4 border-t sm:border-t-0 sm:border-l border-slate-100 flex flex-row sm:flex-col justify-between sm:justify-center items-center sm:items-end shrink-0">
+                        <div class="text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-0 sm:mb-1">Stay</div>
+                        <div class="font-bold text-sm text-red-700 text-right">& and Comfy</div>
+                    </div>
+                </div>
+
+                <!-- 04/11 -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col sm:flex-row relative hover:shadow-md transition-shadow">
+                    <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-green-400"></div>
+                    <div class="bg-slate-50/50 w-full sm:w-36 flex sm:flex-col justify-between sm:justify-start items-center sm:items-start p-3 sm:p-4 border-b sm:border-b-0 sm:border-r border-slate-100 pl-4 sm:pl-5">
+                        <div class="flex items-baseline gap-2 sm:block">
+                            <div class="font-mono font-bold text-xl text-slate-700 tracking-tight">04/11</div>
+                            <div class="text-xs font-bold text-red-500 uppercase">Sat</div>
+                        </div>
+                        <div class="flex items-center gap-2 sm:mt-2">
+                            <span class="text-sm font-bold text-slate-600">阿蘇</span>
+                            <span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-[10px] font-bold">假日</span>
+                        </div>
+                    </div>
+                    <div class="p-4 sm:p-5 flex-1">
+                        <div class="font-bold text-red-700 text-base mb-1.5 leading-snug">🌋 阿蘇火山 & 神秘神社一日遊</div>
+                        <div class="text-slate-500 text-sm space-y-1.5 leading-relaxed">
+                            <p>🚌 <strong>KKday/Klook 一日遊</strong> (輕鬆首選)</p>
+                            <p>🌲 景點：草千里、火山口、<strong>上色見熊野座神社</strong></p>
+                        </div>
+                    </div>
+                    <div class="bg-slate-50 w-full sm:w-32 p-3 sm:p-4 border-t sm:border-t-0 sm:border-l border-slate-100 flex flex-row sm:flex-col justify-between sm:justify-center items-center sm:items-end shrink-0">
+                        <div class="text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-0 sm:mb-1">Stay</div>
+                        <div class="font-bold text-sm text-red-700 text-right">& and Comfy</div>
+                    </div>
+                </div>
+
+                <!-- 04/12 -->
+                <div class="bg-blue-50/40 rounded-xl shadow-sm border border-blue-200 overflow-hidden flex flex-col sm:flex-row relative hover:shadow-md transition-shadow">
+                    <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-blue-500"></div>
+                    <div class="bg-white/50 w-full sm:w-36 flex sm:flex-col justify-between sm:justify-start items-center sm:items-start p-3 sm:p-4 border-b sm:border-b-0 sm:border-r border-blue-100 pl-4 sm:pl-5">
+                        <div class="flex items-baseline gap-2 sm:block">
+                            <div class="font-mono font-bold text-xl text-blue-700 tracking-tight">04/12</div>
+                            <div class="text-xs font-bold text-red-500 uppercase">Sun</div>
+                        </div>
+                        <div class="flex items-center gap-2 sm:mt-2">
+                            <span class="text-sm font-bold text-slate-600">返程</span>
+                            <span class="px-2 py-0.5 bg-blue-600 text-white rounded text-[10px] font-bold tracking-wider">星宇</span>
+                        </div>
+                    </div>
+                    <div class="p-4 sm:p-5 flex-1">
+                        <div class="flex items-start gap-3">
+                            <div class="mt-0.5 text-center w-5 shrink-0"><i class="fas fa-plane-departure text-blue-500"></i></div>
+                            <div>
+                                <div class="font-bold text-blue-800 text-base mb-1.5 leading-snug">✈️ 熊本直飛台中 (完美收尾)</div>
+                                <div class="text-slate-700 text-sm space-y-1.5 leading-relaxed">
+                                    <p>🏯 <strong>上午：熊本城天守閣 & 櫻之馬場城彩苑</strong></p>
+                                    <p>🐻 下午：熊本熊部長辦公室 / 最後採買</p>
+                                    <p>🕒 <strong class="text-red-600 bg-red-50 px-1 rounded">16:10</strong> 務必去對面「鶴屋百貨」前搭車</p>
+                                    <p class="font-bold">🛫 JX317 (19:15 ➔ 20:45)</p>
                                 </div>
-                            </td>
-                            <td class="p-4 font-medium text-purple-700 border-l border-slate-50 group-hover:border-slate-200">Comfort<br>Hakata</td>
-                        </tr>
-                        <!-- 4/05 -->
-                        <tr class="hover:bg-slate-50 transition-colors group">
-                            <td class="p-4 text-center font-mono font-bold text-slate-600">04/05</td>
-                            <td class="p-4 text-center text-red-500 font-bold">Sun</td>
-                            <td class="p-4 text-center text-slate-600 font-medium">福岡</td>
-                            <td class="p-4 text-center"><span class="inline-block px-2 py-1 bg-purple-100 text-purple-700 rounded-md text-xs font-bold">玩樂</span></td>
-                            <td class="p-4">
-                                <div class="font-bold text-purple-700 mb-1">🛍️ 福岡市區賞櫻 & 購物</div>
-                                <div class="text-slate-500">舞鶴公園櫻花 / 天神地下街 / 中洲屋台</div>
-                            </td>
-                            <td class="p-4 font-medium text-purple-700 border-l border-slate-50 group-hover:border-slate-200">Comfort</td>
-                        </tr>
-                        <!-- 4/06 -->
-                        <tr class="hover:bg-slate-50 transition-colors group">
-                            <td class="p-4 text-center font-mono font-bold text-slate-600">04/06</td>
-                            <td class="p-4 text-center text-red-500 font-bold">Mon</td>
-                            <td class="p-4 text-center text-slate-600 font-medium">福岡</td>
-                            <td class="p-4 text-center"><span class="inline-block px-2 py-1 bg-pink-100 text-pink-600 rounded-md text-xs font-bold">補假</span></td>
-                            <td class="p-4">
-                                <div class="font-bold text-purple-700 mb-1">🚣 柳川 (Yanagawa) 一日遊</div>
-                                <div class="text-slate-500 text-xs">
-                                    <span class="bg-yellow-100 text-yellow-800 px-1 rounded">套票</span> 西鐵柳川特惠套票 (Toku Toku)<br>
-                                    平日人少超清幽，午餐必吃蒸籠鰻魚飯
-                                </div>
-                            </td>
-                            <td class="p-4 font-medium text-purple-700 border-l border-slate-50 group-hover:border-slate-200">Comfort</td>
-                        </tr>
-                        <!-- 4/07 -->
-                        <tr class="hover:bg-slate-50 transition-colors group bg-red-50/30">
-                            <td class="p-4 text-center font-mono font-bold text-red-600">04/07</td>
-                            <td class="p-4 text-center text-slate-400 font-bold">Tue</td>
-                            <td class="p-4 text-center text-slate-600 font-medium">熊本</td>
-                            <td class="p-4 text-center"><span class="inline-block px-2 py-1 bg-red-100 text-red-600 rounded-md text-xs font-bold">特休</span></td>
-                            <td class="p-4">
-                                <div class="font-bold text-red-700 mb-1">🚂 九州鐵道慢旅 (停靠：鳥栖 / 久留米)</div>
-                                <div class="text-slate-500 text-xs space-y-1">
-                                    <p>1. 博多➔鳥栖 (快速30分)：<strong>Outlet 購物</strong> (記得先寄行李)</p>
-                                    <p>2. 鳥栖➔久留米 (快速7分)：<strong>吃大砲拉麵</strong></p>
-                                    <p>3. 久留米➔熊本 (區間車1hr)：Check-in + 晚餐</p>
-                                </div>
-                            </td>
-                            <td class="p-4 font-medium text-red-700 border-l border-slate-50 group-hover:border-slate-200">& and Comfy</td>
-                        </tr>
-                        <!-- 4/08 -->
-                        <tr class="hover:bg-slate-50 transition-colors group">
-                            <td class="p-4 text-center font-mono font-bold text-slate-600">04/08</td>
-                            <td class="p-4 text-center text-slate-400 font-bold">Wed</td>
-                            <td class="p-4 text-center text-slate-600 font-medium">熊本</td>
-                            <td class="p-4 text-center"><span class="inline-block px-2 py-1 bg-slate-100 text-slate-600 rounded-md text-xs font-bold">工作</span></td>
-                            <td class="p-4">
-                                <div class="font-bold text-slate-700 mb-1">🌅 晨間散步：沿坪井川長塀走 / 💻 Work & View</div>
-                                <div class="text-slate-500">☕ OMO5 熊本公共露台 / 🌃 熊本市役所夜景</div>
-                            </td>
-                            <td class="p-4 font-medium text-red-700 border-l border-slate-50 group-hover:border-slate-200">& and Comfy</td>
-                        </tr>
-                        <!-- 4/09 -->
-                        <tr class="hover:bg-slate-50 transition-colors group">
-                            <td class="p-4 text-center font-mono font-bold text-slate-600">04/09</td>
-                            <td class="p-4 text-center text-slate-400 font-bold">Thu</td>
-                            <td class="p-4 text-center text-slate-600 font-medium">熊本</td>
-                            <td class="p-4 text-center"><span class="inline-block px-2 py-1 bg-slate-100 text-slate-600 rounded-md text-xs font-bold">工作</span></td>
-                            <td class="p-4">
-                                <div class="font-bold text-slate-700 mb-1">🌅 晨間散步：二之丸廣場 / 💻 Work & Vibe</div>
-                                <div class="text-slate-500">☕ 珈琲回廊 (烘豆坊) / 🏮 上乃裏通探店</div>
-                            </td>
-                            <td class="p-4 font-medium text-red-700 border-l border-slate-50 group-hover:border-slate-200">& and Comfy</td>
-                        </tr>
-                        <!-- 4/10 -->
-                        <tr class="hover:bg-slate-50 transition-colors group">
-                            <td class="p-4 text-center font-mono font-bold text-slate-600">04/10</td>
-                            <td class="p-4 text-center text-slate-400 font-bold">Fri</td>
-                            <td class="p-4 text-center text-slate-600 font-medium">熊本</td>
-                            <td class="p-4 text-center"><span class="inline-block px-2 py-1 bg-slate-100 text-slate-600 rounded-md text-xs font-bold">工作</span></td>
-                            <td class="p-4">
-                                <div class="font-bold text-slate-700 mb-1">🌅 晨間散步：上通商店街 / 💻 Work & Chill</div>
-                                <div class="text-slate-500">☕ TSUTAYA 書店工作 / 🍻 熊本屋台村狂歡</div>
-                            </td>
-                            <td class="p-4 font-medium text-red-700 border-l border-slate-50 group-hover:border-slate-200">& and Comfy</td>
-                        </tr>
-                        <!-- 4/11 -->
-                        <tr class="hover:bg-slate-50 transition-colors group">
-                            <td class="p-4 text-center font-mono font-bold text-slate-600">04/11</td>
-                            <td class="p-4 text-center text-red-500 font-bold">Sat</td>
-                            <td class="p-4 text-center text-slate-600 font-medium">阿蘇</td>
-                            <td class="p-4 text-center"><span class="inline-block px-2 py-1 bg-green-100 text-green-700 rounded-md text-xs font-bold">假日</span></td>
-                            <td class="p-4">
-                                <div class="font-bold text-red-700 mb-1">🌋 阿蘇火山 & 神秘神社一日遊</div>
-                                <div class="text-slate-500 text-xs">
-                                    🚌 <strong>KKday/Klook 一日遊</strong> (輕鬆首選)<br>
-                                    🌲 景點：草千里、火山口、<strong>上色見熊野座神社</strong>
-                                </div>
-                            </td>
-                            <td class="p-4 font-medium text-red-700 border-l border-slate-50 group-hover:border-slate-200">& and Comfy</td>
-                        </tr>
-                        <!-- 4/12 -->
-                        <tr class="hover:bg-slate-50 transition-colors group border-t-2 border-blue-200 bg-blue-50/30">
-                            <td class="p-4 text-center font-mono font-bold text-blue-600">04/12</td>
-                            <td class="p-4 text-center text-red-500 font-bold">Sun</td>
-                            <td class="p-4 text-center text-slate-600 font-medium">返程</td>
-                            <td class="p-4 text-center"><span class="inline-block px-2 py-1 bg-blue-600 text-white rounded-md text-xs font-bold">星宇</span></td>
-                            <td class="p-4">
-                                <div class="flex items-start gap-3">
-                                    <div class="mt-1 min-w-[20px] text-center"><i class="fas fa-plane-departure text-blue-400"></i></div>
-                                    <div>
-                                        <div class="font-bold text-blue-800">✈️ 熊本直飛台中 (完美收尾)</div>
-                                        <div class="text-slate-500 text-xs mt-1">
-                                            🏯 <strong>上午：熊本城天守閣 & 櫻之馬場城彩苑</strong><br>
-                                            🐻 下午：熊本熊部長辦公室 / 最後採買<br>
-                                            🕒 <strong>16:10 務必去對面「鶴屋百貨」前搭車</strong><br>
-                                            🛫 <strong>JX317 (19:15 ➔ 20:45)</strong>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="p-4 font-medium text-slate-400 border-l border-slate-50 group-hover:border-slate-200">Home</td>
-                        </tr>
-                    </tbody>
-                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white/50 w-full sm:w-32 p-3 sm:p-4 border-t sm:border-t-0 sm:border-l border-blue-100 flex flex-row sm:flex-col justify-between sm:justify-center items-center sm:items-end shrink-0">
+                        <div class="text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-0 sm:mb-1">Stay</div>
+                        <div class="font-bold text-sm text-slate-500 text-right">Home</div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
