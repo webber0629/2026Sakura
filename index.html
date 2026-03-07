@@ -8,6 +8,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
         body {
             font-family: 'Noto Sans TC', sans-serif;
             background-color: #f8fafc;
@@ -35,9 +38,13 @@
             transform: translateY(-2px);
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
+        /* iOS Safe Area Padding for Bottom Nav */
+        .pb-safe {
+            padding-bottom: env(safe-area-inset-bottom);
+        }
     </style>
 </head>
-<body class="antialiased selection:bg-pink-200 selection:text-pink-900">
+<body class="antialiased selection:bg-pink-200 selection:text-pink-900 pb-20 sm:pb-0">
 
     <!-- Main Container -->
     <div class="max-w-6xl mx-auto p-4 sm:p-8">
@@ -48,10 +55,7 @@
             <div class="absolute bottom-0 left-0 -mb-10 -ml-10 w-40 h-40 bg-blue-100 rounded-full blur-3xl opacity-50"></div>
             
             <div class="relative z-10 text-center">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 text-slate-600 text-xs font-bold uppercase tracking-wide mb-4">
-                    <i class="fas fa-check-circle text-green-500"></i> Plan Finalized & Upgraded <span class="mx-1 text-slate-300">|</span> <i class="fas fa-seedling text-pink-500"></i> 🇰🇷全州 3/28 滿開預測 <span class="mx-1 text-slate-300">|</span> 🌸 🇯🇵福岡 3/19 開花 (迎接浪漫櫻吹雪)
-                </div>
-                <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-800 mb-3 tracking-tight">
+                <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-800 mb-3 tracking-tight mt-2">
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-rose-400">2026 日韓雙城</span>
                     <span class="block sm:inline sm:ml-2 text-slate-700">遠端工作賞櫻之旅</span>
                 </h1>
@@ -59,28 +63,19 @@
                     <i class="far fa-calendar-alt"></i> 2026/03/28 - 04/12 <span class="bg-slate-200 text-slate-700 text-xs px-2 py-0.5 rounded-md font-bold">16 Days</span>
                 </p>
 
-                <!-- Stats Grid -->
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8 max-w-3xl mx-auto">
-                    <div class="bg-blue-50/50 border border-blue-100 rounded-xl p-3 flex items-center justify-center gap-3">
-                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600"><i class="fas fa-map-marker-alt"></i></div>
-                        <div class="text-left">
-                            <div class="text-xs text-slate-400 font-bold uppercase">全州 (Jeonju)</div>
-                            <div class="font-bold text-slate-700">7 Nights</div>
-                        </div>
+                <!-- Stats Row (Compact) -->
+                <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mt-6 max-w-2xl mx-auto">
+                    <div class="bg-blue-50/80 border border-blue-100 rounded-full px-4 py-2 flex items-center gap-2 shadow-sm">
+                        <span class="text-blue-600 text-sm"><i class="fas fa-map-marker-alt"></i></span>
+                        <span class="text-sm font-bold text-slate-700">全州 <span class="text-slate-500 font-medium text-xs ml-1">7 Nights</span></span>
                     </div>
-                    <div class="bg-purple-50/50 border border-purple-100 rounded-xl p-3 flex items-center justify-center gap-3">
-                        <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center text-purple-600"><i class="fas fa-map-marker-alt"></i></div>
-                        <div class="text-left">
-                            <div class="text-xs text-slate-400 font-bold uppercase">福岡 (Fukuoka)</div>
-                            <div class="font-bold text-slate-700">3 Nights</div>
-                        </div>
+                    <div class="bg-purple-50/80 border border-purple-100 rounded-full px-4 py-2 flex items-center gap-2 shadow-sm">
+                        <span class="text-purple-600 text-sm"><i class="fas fa-map-marker-alt"></i></span>
+                        <span class="text-sm font-bold text-slate-700">福岡 <span class="text-slate-500 font-medium text-xs ml-1">3 Nights</span></span>
                     </div>
-                    <div class="bg-red-50/50 border border-red-100 rounded-xl p-3 flex items-center justify-center gap-3">
-                        <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-red-600"><i class="fas fa-map-marker-alt"></i></div>
-                        <div class="text-left">
-                            <div class="text-xs text-slate-400 font-bold uppercase">熊本 (Kumamoto)</div>
-                            <div class="font-bold text-slate-700">5 Nights</div>
-                        </div>
+                    <div class="bg-red-50/80 border border-red-100 rounded-full px-4 py-2 flex items-center gap-2 shadow-sm">
+                        <span class="text-red-600 text-sm"><i class="fas fa-map-marker-alt"></i></span>
+                        <span class="text-sm font-bold text-slate-700">熊本 <span class="text-slate-500 font-medium text-xs ml-1">5 Nights</span></span>
                     </div>
                 </div>
             </div>
@@ -106,7 +101,7 @@
         </section>
 
         <!-- 3. Main Itinerary Table (Card-Based for Mobile) -->
-        <section class="mb-12">
+        <section id="korea" class="mb-12 scroll-mt-6">
             <div class="flex items-center justify-between mb-4">
                 <h2 class="text-2xl font-bold text-slate-800"><i class="far fa-calendar-check mr-2 text-slate-400"></i> 每日行程表 (市集/無牛美食升級版)</h2>
             </div>
@@ -224,7 +219,7 @@
                     </div>
                     <div class="bg-slate-50 w-full sm:w-32 p-3 sm:p-4 border-t sm:border-t-0 sm:border-l border-slate-100 flex flex-row sm:flex-col justify-between sm:justify-center items-center sm:items-end shrink-0">
                         <div class="text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-0 sm:mb-1">Stay</div>
-                        <div class="font-bold text-sm text-purple-700 text-right">Comfort</div>
+                        <div class="font-bold text-sm text-slate-700 text-right">LABE Hotel</div>
                     </div>
                 </div>
 
@@ -270,7 +265,10 @@
                     </div>
                     <div class="p-4 sm:p-5 flex-1">
                         <div class="font-bold text-slate-700 text-base mb-1.5 leading-snug">💻 遠端工作 (09:00-18:00)</div>
-                        <div class="text-slate-500 text-sm leading-relaxed">🌙 <strong class="text-indigo-600">客理團路 (객리단길)</strong> 老屋餐酒館 / 體驗道地炸雞配生啤 (Chimaek)</div>
+                        <div class="text-slate-500 text-sm space-y-1.5 leading-relaxed">
+                            <p>🛒 下班先逛：<strong class="text-pink-600">韓國大創 Daiso (全州最大客舍店)</strong> 狂買文創與櫻花季小物</p>
+                            <p>🌙 晚餐：<strong class="text-indigo-600">客理團路 (객리단길)</strong> 老屋餐酒館 / 體驗道地炸雞配生啤 (Chimaek)</p>
+                        </div>
                     </div>
                     <div class="bg-slate-50 w-full sm:w-32 p-3 sm:p-4 border-t sm:border-t-0 sm:border-l border-slate-100 flex flex-row sm:flex-col justify-between sm:justify-center items-center sm:items-end shrink-0">
                         <div class="text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-0 sm:mb-1">Stay</div>
@@ -304,8 +302,9 @@
                     </div>
                 </div>
 
-                <!-- 04/04 -->
-                <div class="bg-indigo-50/30 rounded-xl shadow-sm border border-indigo-100 overflow-hidden flex flex-col sm:flex-row relative hover:shadow-md transition-shadow">
+                <!-- 04/04 (Japan Starts Here) -->
+                <div id="japan" class="scroll-mt-6"></div>
+                <div class="bg-indigo-50/30 rounded-xl shadow-sm border border-indigo-100 overflow-hidden flex flex-col sm:flex-row relative hover:shadow-md transition-shadow mt-6">
                     <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-indigo-400"></div>
                     <div class="bg-white/50 w-full sm:w-36 flex sm:flex-col justify-between sm:justify-start items-center sm:items-start p-3 sm:p-4 border-b sm:border-b-0 sm:border-r border-indigo-100 pl-4 sm:pl-5">
                         <div class="flex items-baseline gap-2 sm:block">
@@ -323,8 +322,9 @@
                             <div>
                                 <div class="font-bold text-indigo-800 text-base mb-1.5 leading-snug">韓日跨國移動 (清州直飛福岡)</div>
                                 <div class="text-slate-600 text-sm space-y-1.5 leading-relaxed">
-                                    <p>🚕 12:30 搭計程車前往「全州市外巴士站」</p>
-                                    <p>🕒 13:00 搭巴士 ➔ 清州機場 (約1.5hr)</p>
+                                    <p>🚕 11:30 前往「全州市外巴士站」</p>
+                                    <p>🚌 12:00 搭巴士 ➔ 清州市外客運站 (班次多/約2hr)</p>
+                                    <p>🚕 14:10 轉計程車或747公車 ➔ 清州機場</p>
                                     <p>🛫 航班：TW225 (17:05 ➔ 18:20)</p>
                                     <p>🍲 晚餐：<strong class="text-indigo-700">博多水炊鍋</strong> (濃厚膠原蛋白雞湯火鍋，完美避開牛肉！)</p>
                                 </div>
@@ -555,17 +555,55 @@
         <!-- 4. Info Cards Grid -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
             
-            <!-- Left Column: Transport & Tickets -->
-            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 hover-card">
+            <!-- Left Column: Transport & Flights (Combined) -->
+            <div id="tickets" class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 hover-card scroll-mt-6">
                 <h2 class="text-lg font-bold text-yellow-600 mb-4 flex items-center">
-                    <i class="fas fa-ticket-alt mr-3 bg-yellow-100 p-2 rounded-lg"></i> 交通票券 & 預訂攻略
+                    <i class="fas fa-ticket-alt mr-3 bg-yellow-100 p-2 rounded-lg"></i> 交通樞紐 (航班與交通)
                 </h2>
+                
+                <!-- Flight Schedule Mini Table -->
+                <div class="mb-5 overflow-x-auto rounded-lg border border-slate-100">
+                    <table class="w-full text-xs text-left border-collapse bg-slate-50/50">
+                        <thead class="bg-slate-100 text-slate-600">
+                            <tr>
+                                <th class="p-2 font-bold rounded-tl-lg">行程</th>
+                                <th class="p-2 font-bold">航班/時間</th>
+                                <th class="p-2 font-bold rounded-tr-lg">航線</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100 text-slate-600">
+                            <tr>
+                                <td class="p-2"><span class="bg-yellow-100 text-yellow-700 px-1.5 py-0.5 rounded font-bold">去程</span> <span class="text-slate-400">3/28</span></td>
+                                <td class="p-2 font-mono">易斯達 ZE782<br><span class="text-[10px] text-slate-400 font-sans">02:35-06:05</span></td>
+                                <td class="p-2">TPE ➔ CJJ</td>
+                            </tr>
+                            <tr>
+                                <td class="p-2"><span class="bg-purple-100 text-purple-700 px-1.5 py-0.5 rounded font-bold">跨國</span> <span class="text-slate-400">4/04</span></td>
+                                <td class="p-2 font-mono">德威 TW225<br><span class="text-[10px] text-slate-400 font-sans">17:05-18:20</span></td>
+                                <td class="p-2">CJJ ➔ FUK</td>
+                            </tr>
+                            <tr>
+                                <td class="p-2"><span class="bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded font-bold">回程</span> <span class="text-slate-400">4/12</span></td>
+                                <td class="p-2 font-mono">星宇 JX317<br><span class="text-[10px] text-slate-400 font-sans">19:15-20:45</span></td>
+                                <td class="p-2">KMJ ➔ RMQ</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
                 <div class="space-y-4">
                     <div class="flex gap-3 items-start pb-3 border-b border-slate-100">
                         <div class="text-xs font-bold bg-slate-100 text-slate-600 px-2 py-1 rounded mt-0.5">3/28</div>
                         <div>
                             <div class="font-bold text-sm text-slate-700">清州機場 ↔ 全州</div>
                             <div class="text-xs text-slate-500 mt-1">轉乘：TAXI + 市外巴士 + TAXI (最順路)，約 ₩23,000</div>
+                        </div>
+                    </div>
+                    <div class="flex gap-3 items-start pb-3 border-b border-slate-100">
+                        <div class="text-xs font-bold bg-slate-100 text-slate-600 px-2 py-1 rounded mt-0.5">4/04</div>
+                        <div>
+                            <div class="font-bold text-sm text-slate-700">全州 ➔ 清州機場 (去搭飛機)</div>
+                            <div class="text-xs text-slate-500 mt-1">直達機場一天僅2班風險高。<strong>強烈建議：全州搭巴士 ➔ 清州客運站 ➔ 轉計程車/公車至機場。</strong></div>
                         </div>
                     </div>
                     <div class="flex gap-3 items-start pb-3 border-b border-slate-100">
@@ -593,34 +631,63 @@
             </div>
 
             <!-- Right Column: Accommodation -->
-            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 hover-card">
+            <div id="accommodation" class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 hover-card scroll-mt-6">
                 <h2 class="text-lg font-bold text-indigo-600 mb-4 flex items-center">
-                    <i class="fas fa-bed mr-3 bg-indigo-100 p-2 rounded-lg"></i> 住宿確認 (全數已訂)
+                    <i class="fas fa-bed mr-3 bg-indigo-100 p-2 rounded-lg"></i> 住宿確認
                 </h2>
                 <div class="space-y-4">
-                    <div class="p-3 bg-blue-50/50 rounded-lg border border-blue-100">
+                    <div class="p-3 bg-blue-50/50 rounded-lg border border-blue-100 relative group">
                         <div class="flex justify-between items-center mb-1">
                             <span class="text-xs font-bold text-blue-600 bg-blue-100 px-2 py-0.5 rounded">全州 7晚</span>
-                            <span class="text-xs text-green-600 font-bold"><i class="fas fa-check-circle"></i> Confirmed</span>
                         </div>
-                        <div class="font-bold text-slate-700">LABE Hotel (拉貝飯店)</div>
-                        <div class="text-xs text-slate-500">河岸第一排 / 教育大學旁 (清幽/Workation首選)</div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=LABE+Hotel+Jeonju" target="_blank" class="font-bold text-slate-700 hover:text-blue-600 transition-colors flex items-center gap-1 group-hover:underline">
+                            LABE Hotel (라베호텔) <i class="fas fa-map-marker-alt text-slate-400 text-xs"></i>
+                        </a>
+                        <div class="text-xs text-slate-500 mt-0.5 mb-2">河岸第一排 / 教育大學旁 (清幽/Workation首選)</div>
+                        
+                        <div class="pt-2 border-t border-blue-200/50">
+                            <div class="text-xs font-bold text-blue-800 mb-1 flex items-center gap-1"><i class="fas fa-shopping-basket"></i> 周邊生活機能</div>
+                            <ul class="text-[11px] text-slate-600 space-y-1">
+                                <li>🏪 <strong>日常：</strong>出門即有 CU/GS25 便利商店，步行可達南部市場</li>
+                                <li>🛒 <strong>超市：</strong>大採買建議搭計程車(~10分)至 <strong>Homeplus (完山店)</strong></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="p-3 bg-purple-50/50 rounded-lg border border-purple-100">
+                    <div class="p-3 bg-purple-50/50 rounded-lg border border-purple-100 relative group">
                         <div class="flex justify-between items-center mb-1">
                             <span class="text-xs font-bold text-purple-600 bg-purple-100 px-2 py-0.5 rounded">福岡 3晚</span>
-                            <span class="text-xs text-green-600 font-bold"><i class="fas fa-check-circle"></i> Confirmed</span>
                         </div>
-                        <div class="font-bold text-slate-700">Comfort Hotel Hakata</div>
-                        <div class="text-xs text-slate-500">博多站步行 2 分鐘 (交通樞紐)</div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Comfort+Hotel+Hakata" target="_blank" class="font-bold text-slate-700 hover:text-purple-600 transition-colors flex items-center gap-1 group-hover:underline">
+                            Comfort Hotel Hakata <i class="fas fa-map-marker-alt text-slate-400 text-xs"></i>
+                        </a>
+                        <div class="text-xs text-slate-500 mt-0.5 mb-2">博多站步行 2 分鐘 (交通樞紐)</div>
+                        
+                        <div class="pt-2 border-t border-purple-200/50">
+                            <div class="text-xs font-bold text-purple-800 mb-1 flex items-center gap-1"><i class="fas fa-shopping-basket"></i> 激推好逛 (皆在博多車站內)</div>
+                            <ul class="text-[11px] text-slate-600 space-y-1 leading-tight">
+                                <li>🛒 <strong>超市：</strong>Yodobashi 4F 的 <strong>LOPIA</strong> (便宜生鮮/草莓必買)</li>
+                                <li>🛍️ <strong>服飾雜貨：</strong>KITTE 內有 <strong>Uniqlo / GU</strong></li>
+                                <li>🧸 <strong>生活：</strong>AMU 6F 有 <strong>無印良品</strong>，AMU EST B1F 有 <strong>3COINS</strong></li>
+                                <li>📦 <strong>百元店：</strong>巴士總站 5F 有超巨大 <strong>Daiso大創</strong></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="p-3 bg-red-50/50 rounded-lg border border-red-100">
+                    <div class="p-3 bg-red-50/50 rounded-lg border border-red-100 relative group">
                         <div class="flex justify-between items-center mb-1">
                             <span class="text-xs font-bold text-red-600 bg-red-100 px-2 py-0.5 rounded">熊本 5晚</span>
-                            <span class="text-xs text-green-600 font-bold"><i class="fas fa-check-circle"></i> Confirmed</span>
                         </div>
-                        <div class="font-bold text-slate-700">& AND COMFY HOTEL</div>
-                        <div class="text-xs text-slate-500">通町筋步行 6 分 (城堡景觀/屋頂露台)</div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=AND+COMFY+HOTEL+Kumamoto" target="_blank" class="font-bold text-slate-700 hover:text-red-600 transition-colors flex items-center gap-1 group-hover:underline">
+                            & AND COMFY HOTEL <i class="fas fa-map-marker-alt text-slate-400 text-xs"></i>
+                        </a>
+                        <div class="text-xs text-slate-500 mt-0.5 mb-2">通町筋步行 6 分 (城堡景觀/屋頂露台)</div>
+                        
+                        <div class="pt-2 border-t border-red-200/50">
+                            <div class="text-xs font-bold text-red-800 mb-1 flex items-center gap-1"><i class="fas fa-shopping-basket"></i> 激推好逛 (下通/上通商圈)</div>
+                            <ul class="text-[11px] text-slate-600 space-y-1 leading-tight">
+                                <li>🛒 <strong>宵夜/雜貨：</strong>走路 3 分鐘到 <strong>唐吉訶德 (下通店)</strong></li>
+                                <li>🛍️ <strong>神級商場：</strong>走路 3 分鐘即達 <strong>COCOSA 商場</strong>！裡面直接包辦 <strong>Uniqlo、GU、無印良品</strong> 及 <strong>3COINS+plus</strong>，一站買齊！</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -721,7 +788,7 @@
         </section>
 
         <!-- 7. Final Checklist (Minimalist) -->
-        <section class="bg-rose-50 rounded-2xl p-6 mb-12 border border-rose-200 hover-card">
+        <section id="checklist" class="bg-rose-50 rounded-2xl p-6 mb-12 border border-rose-200 hover-card scroll-mt-6">
             <h2 class="text-xl font-bold text-rose-800 mb-4 flex items-center">
                 <i class="fas fa-bell mr-3 bg-rose-200 p-2 rounded-full text-rose-700 text-sm"></i> 
                 最終確認清單 (To-Do List)
@@ -754,51 +821,47 @@
             </div>
         </section>
 
-        <!-- 8. Flight Schedule Summary -->
-        <section class="bg-sky-50 rounded-2xl p-6 shadow-sm border border-sky-200 mb-8 hover-card">
-            <h2 class="text-lg font-bold text-sky-900 mb-4 flex items-center">
-                <i class="fas fa-plane-up mr-3 bg-sky-200 p-2 rounded-full text-sky-700"></i> 航班時刻表 (Flight Schedule)
-            </h2>
-            <div class="overflow-x-auto">
-                <table class="w-full text-sm text-left border-collapse bg-white rounded-xl shadow-sm overflow-hidden">
-                    <thead class="bg-sky-100 text-sky-900">
-                        <tr>
-                            <th class="p-4 font-bold">行程段</th>
-                            <th class="p-4 font-bold">日期</th>
-                            <th class="p-4 font-bold">航空公司</th>
-                            <th class="p-4 font-bold">航班號</th>
-                            <th class="p-4 font-bold">起飛 / 抵達</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-sky-100 text-slate-700">
-                        <tr class="hover:bg-sky-50/50 transition-colors">
-                            <td class="p-4"><span class="bg-yellow-100 text-yellow-700 px-2 py-1 rounded text-xs font-bold">去程</span></td>
-                            <td class="p-4 font-medium">03/28 (六)</td>
-                            <td class="p-4">易斯達 ZE782</td>
-                            <td class="p-4 font-mono text-slate-500">TPE 02:35 ➔ CJJ 06:05</td>
-                        </tr>
-                        <tr class="hover:bg-sky-50/50 transition-colors">
-                            <td class="p-4"><span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs font-bold">跨國</span></td>
-                            <td class="p-4 font-medium">04/04 (六)</td>
-                            <td class="p-4">德威 TW225</td>
-                            <td class="p-4 font-mono text-slate-500">CJJ 17:05 ➔ FUK 18:20</td>
-                        </tr>
-                        <tr class="hover:bg-sky-50/50 transition-colors">
-                            <td class="p-4"><span class="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs font-bold">回程</span></td>
-                            <td class="p-4 font-medium">04/12 (日)</td>
-                            <td class="p-4">星宇 JX317</td>
-                            <td class="p-4 font-mono text-slate-500">KMJ 19:15 ➔ RMQ 20:45</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <footer class="text-center mt-12 text-slate-400 text-sm">
+        <footer class="text-center mt-12 mb-8 text-slate-400 text-sm">
             <p>Designed for your 2026 Adventure ✨</p>
         </footer>
 
     </div>
+
+    <!-- Mobile Bottom Navigation (Visible only on small screens) -->
+    <nav class="sm:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)] z-50 pb-safe">
+        <ul class="flex justify-around items-center h-16">
+            <li>
+                <a href="#korea" class="flex flex-col items-center justify-center w-full h-full text-slate-500 hover:text-blue-500 active:text-blue-600 px-2">
+                    <span class="text-xl mb-1 leading-none">🇰🇷</span>
+                    <span class="text-[10px] font-bold mt-1">韓國</span>
+                </a>
+            </li>
+            <li>
+                <a href="#japan" class="flex flex-col items-center justify-center w-full h-full text-slate-500 hover:text-red-500 active:text-red-600 px-2">
+                    <span class="text-xl mb-1 leading-none">🇯🇵</span>
+                    <span class="text-[10px] font-bold mt-1">日本</span>
+                </a>
+            </li>
+            <li>
+                <a href="#tickets" class="flex flex-col items-center justify-center w-full h-full text-slate-500 hover:text-yellow-600 active:text-yellow-700 px-2">
+                    <i class="fas fa-ticket-alt text-xl mb-1"></i>
+                    <span class="text-[10px] font-bold">交通</span>
+                </a>
+            </li>
+            <li>
+                <a href="#accommodation" class="flex flex-col items-center justify-center w-full h-full text-slate-500 hover:text-indigo-600 active:text-indigo-700 px-2">
+                    <i class="fas fa-bed text-xl mb-1"></i>
+                    <span class="text-[10px] font-bold">住宿</span>
+                </a>
+            </li>
+            <li>
+                <a href="#checklist" class="flex flex-col items-center justify-center w-full h-full text-slate-500 hover:text-rose-600 active:text-rose-700 px-2">
+                    <i class="fas fa-list-check text-xl mb-1"></i>
+                    <span class="text-[10px] font-bold">清單</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
 
 </body>
 </html>
