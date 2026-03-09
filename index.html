@@ -10,7 +10,7 @@
     <style>
         html {
             scroll-behavior: smooth;
-            font-size: 17.5px; /* 稍微放大手機版基礎字體，讓整體比例變大提升閱讀性 */
+            font-size: 18px; /* 稍微放大手機版基礎字體，讓整體比例變大提升閱讀性 */
         }
         @media (min-width: 640px) {
             html {
@@ -70,18 +70,18 @@
                 </p>
 
                 <!-- Stats Row (Compact) -->
-                <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mt-6 max-w-2xl mx-auto">
-                    <div class="bg-blue-50/80 border border-blue-100 rounded-full px-4 py-2 flex items-center gap-2 shadow-sm">
-                        <span class="text-blue-600 text-sm"><i class="fas fa-map-marker-alt"></i></span>
-                        <span class="text-sm font-bold text-slate-700">全州 <span class="text-slate-500 font-medium text-xs ml-1">7 Nights</span></span>
+                <div class="flex flex-nowrap justify-center items-center gap-1.5 sm:gap-4 mt-6 max-w-2xl mx-auto w-full">
+                    <div class="bg-blue-50/80 border border-blue-100 rounded-full px-2.5 sm:px-4 py-1.5 sm:py-2 flex items-center gap-1 sm:gap-2 shadow-sm shrink-0 whitespace-nowrap">
+                        <span class="text-blue-600 text-[10px] sm:text-sm"><i class="fas fa-map-marker-alt"></i></span>
+                        <span class="text-xs sm:text-sm font-bold text-slate-700">全州 <span class="text-slate-500 font-medium text-[9px] sm:text-xs ml-0.5 sm:ml-1">7 Nights</span></span>
                     </div>
-                    <div class="bg-purple-50/80 border border-purple-100 rounded-full px-4 py-2 flex items-center gap-2 shadow-sm">
-                        <span class="text-purple-600 text-sm"><i class="fas fa-map-marker-alt"></i></span>
-                        <span class="text-sm font-bold text-slate-700">福岡 <span class="text-slate-500 font-medium text-xs ml-1">3 Nights</span></span>
+                    <div class="bg-purple-50/80 border border-purple-100 rounded-full px-2.5 sm:px-4 py-1.5 sm:py-2 flex items-center gap-1 sm:gap-2 shadow-sm shrink-0 whitespace-nowrap">
+                        <span class="text-purple-600 text-[10px] sm:text-sm"><i class="fas fa-map-marker-alt"></i></span>
+                        <span class="text-xs sm:text-sm font-bold text-slate-700">福岡 <span class="text-slate-500 font-medium text-[9px] sm:text-xs ml-0.5 sm:ml-1">3 Nights</span></span>
                     </div>
-                    <div class="bg-red-50/80 border border-red-100 rounded-full px-4 py-2 flex items-center gap-2 shadow-sm">
-                        <span class="text-red-600 text-sm"><i class="fas fa-map-marker-alt"></i></span>
-                        <span class="text-sm font-bold text-slate-700">熊本 <span class="text-slate-500 font-medium text-xs ml-1">5 Nights</span></span>
+                    <div class="bg-red-50/80 border border-red-100 rounded-full px-2.5 sm:px-4 py-1.5 sm:py-2 flex items-center gap-1 sm:gap-2 shadow-sm shrink-0 whitespace-nowrap">
+                        <span class="text-red-600 text-[10px] sm:text-sm"><i class="fas fa-map-marker-alt"></i></span>
+                        <span class="text-xs sm:text-sm font-bold text-slate-700">熊本 <span class="text-slate-500 font-medium text-[9px] sm:text-xs ml-0.5 sm:ml-1">5 Nights</span></span>
                     </div>
                 </div>
             </div>
@@ -163,8 +163,13 @@
                         </div>
                     </div>
                     <div class="p-4 sm:p-5 flex-1">
-                        <div class="font-bold text-green-700 text-base mb-1.5 leading-snug">🌳 全州週末慢活 (補足精神)</div>
+                        <div class="font-bold text-green-700 text-base mb-1.5 leading-snug">🌳 全州週末慢活 (認識城市)</div>
                         <div class="text-slate-600 text-sm space-y-1.5 leading-relaxed">
+                            <p>🚶‍♂️ <strong>上午：參加免費徒步導覽 (Free Walking Tour)</strong></p>
+                            <p class="text-xs text-slate-500 pl-4 border-l-2 border-green-200 ml-1 mb-2">
+                                💡 <span class="font-bold">背包客秘訣：</span>走到「慶基殿」門口的觀光案內所，現場報名官方的免費中/英文導覽，聽解說員講述朝鮮王朝發源地的故事！<br>
+                                <a href="https://tour.jeonju.go.kr/cnh/index.jeonju?menuCd=DOM_000000305004001000" target="_blank" class="text-blue-500 hover:text-blue-700 underline mt-1 inline-block">🔗 全州文化觀光官方資訊</a>
+                            </p>
                             <p>🛍️ <strong>春季韓屋村週末市集：</strong> 趁著週末尋找手作藝術家挖寶</p>
                             <p>🦆 德津公園踩天鵝船 / ☕ 客舍路探訪文青咖啡廳 (Old Brick)</p>
                         </div>
@@ -547,6 +552,10 @@
                                 <div class="font-bold text-blue-800 text-base mb-1.5 leading-snug">✈️ 熊本直飛台中 (完美收尾)</div>
                                 <div class="text-slate-700 text-sm space-y-1.5 leading-relaxed">
                                     <p>🏯 <strong>上午：熊本城天守閣 & 櫻之馬場城彩苑</strong></p>
+                                    <p class="text-xs text-slate-500 pl-3 border-l-2 border-blue-200 ml-1 mb-2 bg-white/50 p-2 rounded-r">
+                                        💡 <span class="font-bold">深度體驗：</span>強烈建議出發前至 <strong>Kumamoto SGG Club</strong> 網站預約免費英文志工！讓在地爺爺奶奶帶你們深度認識熊本城與地震重建的故事（不需小費，只需幫志工付門票）。<br>
+                                        <a href="https://kumamoto-sgg.jp/en/" target="_blank" class="text-blue-500 hover:text-blue-700 underline mt-1 inline-block">🔗 Kumamoto SGG Club 預約網址</a>
+                                    </p>
                                     <p>🐻 下午：熊本熊部長辦公室 / 最後採買</p>
                                     <p>🕒 <strong class="text-red-600 bg-red-50 px-1 rounded">16:10</strong> 務必去對面「鶴屋百貨」前搭車</p>
                                     <p class="font-bold">🛫 JX317 (19:15 ➔ 20:45)</p>
@@ -810,18 +819,26 @@
                     <i class="fas fa-check-square text-lg text-green-500"></i>
                 </div>
                 <div class="flex items-center gap-3 p-3 bg-white rounded-lg shadow-sm border border-rose-100">
+                    <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-xs">Pre-trip</div>
+                    <div class="flex-1">
+                        <div class="font-bold">預約：熊本城 SGG 免費英文導覽</div>
+                        <div class="text-xs text-slate-500">建議提前 1-2 週至官網填單申請 4/12 上午的導覽。</div>
+                    </div>
+                    <i class="far fa-square text-lg text-slate-300"></i>
+                </div>
+                <div class="flex items-center gap-3 p-3 bg-white rounded-lg shadow-sm border border-rose-100">
                     <div class="w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center font-bold"><i class="fas fa-university"></i></div>
                     <div class="flex-1">
                         <div class="font-bold">銀行：開通跨國提款</div>
-                        <div class="text-xs text-slate-500">臨櫃辦理跨國提款功能 + 設定磁條密碼。</div>
+                        <div class="text-xs text-slate-500">臨櫃辦理跨國提款功能 + 設定 4 位數磁條密碼。</div>
                     </div>
                     <i class="far fa-square text-lg text-slate-300"></i>
                 </div>
                 <div class="flex items-center gap-3 p-3 bg-white rounded-lg shadow-sm border border-rose-100">
                     <div class="w-8 h-8 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center font-bold"><i class="fas fa-wifi"></i></div>
                     <div class="flex-1">
-                        <div class="font-bold">網卡：日韓雙國 / 兩張網卡</div>
-                        <div class="text-xs text-slate-500">確認上網方案已備妥。</div>
+                        <div class="font-bold">網卡與 APP：網路與交通準備</div>
+                        <div class="text-xs text-slate-500">確認日韓網卡。下載 Kakao T 並綁定信用卡；確認全支付已開通。</div>
                     </div>
                     <i class="far fa-square text-lg text-slate-300"></i>
                 </div>
