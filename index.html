@@ -368,7 +368,10 @@
                                 <div class="text-slate-600 text-sm space-y-1.5 leading-relaxed">
                                     <p>🚕 11:30 前往「全州市外巴士站」</p>
                                     <p>🚌 12:00 搭巴士 ➔ 清州市外客運站 (班次多/約2hr)</p>
-                                    <p>🚕 14:10 轉計程車或747公車 ➔ 清州機場</p>
+                                    <p class="text-xs text-slate-500 pl-4 border-l-2 border-indigo-200 ml-1 mb-2 bg-indigo-50/50 p-2 rounded-r">
+                                        💡 <span class="font-bold">防飢荒秘訣：</span>清州機場超小沒什麼餐廳！強烈建議抵達「清州客運站」後，先在周邊吃飽午餐，約 15:00 再出發去機場。
+                                    </p>
+                                    <p>🚕 15:00 轉計程車或747公車 ➔ 清州機場</p>
                                     <p>🛫 航班：TW225 (17:05 ➔ 18:20)</p>
                                     <p>🍲 晚餐：<strong class="text-indigo-700">博多水炊鍋</strong> (濃厚膠原蛋白雞湯火鍋，完美避開牛肉！)</p>
                                 </div>
@@ -457,7 +460,10 @@
                     <div class="p-4 sm:p-5 flex-1">
                         <div class="font-bold text-red-700 text-base mb-1.5 leading-snug">🚂 九州鐵道慢旅 (停靠：鳥栖 / 久留米)</div>
                         <div class="text-slate-600 text-sm space-y-1.5 leading-relaxed">
-                            <p>1. 博多➔鳥栖 (快速30分)：<strong>Outlet 購物</strong> <span class="text-xs text-red-500 font-bold bg-red-50 px-1 rounded">(⚠️ 抵達鳥栖站務必先搶 Coin Locker 寄行李)</span></p>
+                            <p>1. 博多➔鳥栖 (快速30分)：<strong>Outlet 購物</strong></p>
+                            <p class="text-xs text-slate-500 pl-4 border-l-2 border-red-200 ml-1 mb-2 bg-red-50/30 p-2 rounded-r">
+                                💡 <span class="font-bold">行李寄放備案：</span>抵達鳥栖站務必先搶 Coin Locker。如果櫃子不幸全滿別慌，直接把行李扛上接駁公車，Outlet 裡面也有超多寄物櫃可放！
+                            </p>
                             <p>2. 鳥栖➔久留米 (快速7分)：<strong>吃大砲拉麵</strong></p>
                             <p>3. 久留米➔熊本 (區間車1hr)：Check-in + 晚餐</p>
                         </div>
@@ -916,6 +922,20 @@
                     </div>
                     <i class="far fa-square text-lg text-slate-300"></i>
                 </div>
+                <div class="flex items-center gap-3 p-3 bg-white rounded-lg shadow-sm border border-rose-100">
+                    <div class="w-8 h-8 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center font-bold"><i class="fas fa-suitcase"></i></div>
+                    <div class="flex-1">
+                        <div class="font-bold">打包：注意要帶的東西</div>
+                        <div class="text-xs text-slate-500 mt-1">
+                            • 1.5M 延長線<br>
+                            • 隨身雨傘<br>
+                            • 洗衣精 (旅行裝/洗衣球)<br>
+                            • 眼鏡<br>
+                            • 清洗維持器
+                        </div>
+                    </div>
+                    <i class="far fa-square text-lg text-slate-300"></i>
+                </div>
             </div>
         </section>
 
@@ -928,40 +948,34 @@
     <!-- Mobile Bottom Navigation (Visible only on small screens) -->
     <nav class="sm:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)] z-50 pb-safe">
         <ul class="flex justify-around items-center h-16">
-            <li>
+            <li class="flex-1">
                 <a href="#korea" class="flex flex-col items-center justify-center w-full h-full text-slate-500 hover:text-blue-500 active:text-blue-600 px-1">
                     <span class="text-xl mb-1 leading-none">🇰🇷</span>
                     <span class="text-[11px] font-bold mt-1">韓國</span>
                 </a>
             </li>
-            <li>
+            <li class="flex-1">
                 <a href="#japan" class="flex flex-col items-center justify-center w-full h-full text-slate-500 hover:text-red-500 active:text-red-600 px-1">
                     <span class="text-xl mb-1 leading-none">🇯🇵</span>
                     <span class="text-[11px] font-bold mt-1">日本</span>
                 </a>
             </li>
-            <li>
+            <li class="flex-1">
                 <a href="#tickets" class="flex flex-col items-center justify-center w-full h-full text-slate-500 hover:text-yellow-600 active:text-yellow-700 px-1">
                     <i class="fas fa-ticket-alt text-xl mb-1"></i>
                     <span class="text-[11px] font-bold">交通</span>
                 </a>
             </li>
-            <li>
+            <li class="flex-1">
                 <a href="#accommodation" class="flex flex-col items-center justify-center w-full h-full text-slate-500 hover:text-indigo-600 active:text-indigo-700 px-1">
                     <i class="fas fa-bed text-xl mb-1"></i>
                     <span class="text-[11px] font-bold">住宿</span>
                 </a>
             </li>
-            <li>
+            <li class="flex-1">
                 <a href="#checklist" class="flex flex-col items-center justify-center w-full h-full text-slate-500 hover:text-rose-600 active:text-rose-700 px-1">
                     <i class="fas fa-list-check text-xl mb-1"></i>
                     <span class="text-[11px] font-bold">清單</span>
-                </a>
-            </li>
-            <li class="border-l border-slate-100 pl-1">
-                <a href="#" class="flex flex-col items-center justify-center w-full h-full text-slate-400 hover:text-slate-600 active:text-slate-800 px-2" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
-                    <i class="fas fa-arrow-up text-lg mb-1"></i>
-                    <span class="text-[10px] font-bold">TOP</span>
                 </a>
             </li>
         </ul>
