@@ -10,11 +10,11 @@
     <style>
         html {
             scroll-behavior: smooth;
-            font-size: 20px; /* 手機版基礎字體放大，提升閱讀性 */
+            font-size: 20px;
         }
         @media (min-width: 640px) {
             html {
-                font-size: 18px; /* 電腦/平板版維持精緻大小 */
+                font-size: 18px;
             }
         }
         body {
@@ -25,7 +25,6 @@
         .font-mono {
             font-family: 'Roboto Mono', monospace;
         }
-        /* Custom Scrollbar for tables */
         .custom-scrollbar::-webkit-scrollbar {
             height: 6px;
         }
@@ -36,7 +35,6 @@
             background-color: #cbd5e1;
             border-radius: 20px;
         }
-        /* Card Hover Effect */
         .hover-card {
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
@@ -44,7 +42,6 @@
             transform: translateY(-2px);
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
-        /* iOS Safe Area Padding for Bottom Nav */
         .pb-safe {
             padding-bottom: env(safe-area-inset-bottom);
         }
@@ -83,7 +80,7 @@
                 </div>
             </div>
         </header>
-        <!-- 2. Strategy Highlights -->
+
         <section class="bg-white rounded-2xl shadow-sm border-l-4 border-pink-400 p-6 mb-8 hover-card">
             <h2 class="text-xl font-bold text-slate-800 mb-4 flex items-center">
                 <i class="fas fa-lightbulb text-pink-500 mr-3 text-2xl"></i> 行程核心亮點
@@ -102,7 +99,6 @@
             </div>
         </section>
 
-        <!-- 3. Main Itinerary Table (Card-Based for Mobile) -->
         <section id="jeonju" class="mb-12 scroll-mt-6">
             <div class="flex items-center justify-between mb-4">
                 <h2 class="text-2xl font-bold text-slate-800"><i class="far fa-calendar-check mr-2 text-slate-400"></i> 每日行程表</h2>
@@ -132,7 +128,7 @@
                                     <p><span class="bg-yellow-100 text-yellow-800 px-1.5 py-0.5 rounded text-[10px] font-bold mr-1">貴賓室</span> Plaza Premium Lounge (Zone D)</p>
                                     <p>🚌 07:00 機場外3號站牌搭 <strong class="text-blue-600">747急行公車(紅)</strong> ➔ 清州客運站 (約40分直達)</p>
                                     <p>🚌 08:00 轉乘市外巴士 ➔ 全州 (1.5hr)</p>
-                                    <p class="mt-2"><span class="bg-pink-100 text-pink-800 px-1.5 py-0.5 rounded text-[10px] font-bold mr-1">3/24最終預測</span> 🌸 <strong>全州已於 3/26 提前開花！</strong>抵達當天花況約 3-5 成，正往滿開邁進！</p>
+                                    <p class="mt-2"><span class="bg-pink-100 text-pink-800 px-1.5 py-0.5 rounded text-[10px] font-bold animate-pulse mr-1">3/26最新預測</span> 🌸 <strong>今日(3/26)全州已正式開花！</strong>後天抵達當天花況約 3-5 成，正往滿開邁進！</p>
                                     <p>🌅 傍晚散步：沿飯店門口 <strong class="text-pink-600">全州川櫻花步道</strong> 尋找初綻櫻花 ➔ 途經水上亭閣 <strong class="text-slate-700">青燕樓 (청연루)</strong> 拍夕陽</p>
                                     <p class="mt-1"><span class="bg-indigo-100 text-indigo-800 px-1.5 py-0.5 rounded text-[10px] font-bold mr-1">週末限定</span> 🌙 晚上順著河畔走到 <strong class="text-indigo-700 text-base">南部市場夜市</strong> 吃創意小吃！</p>
                                 </div>
@@ -334,7 +330,6 @@
                     </div>
                 </div>
 
-                <!-- 04/04 (Japan Starts Here) -->
                 <div id="fukuoka" class="scroll-mt-6"></div>
                 <div class="bg-indigo-50/30 rounded-xl shadow-sm border border-indigo-100 overflow-hidden flex flex-col sm:flex-row relative hover:shadow-md transition-shadow mt-6">
                     <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-indigo-400"></div>
@@ -394,7 +389,7 @@
                             <p class="text-xs text-slate-500 pl-4 border-l-2 border-purple-200 ml-1 mb-2">
                                 從博多搭火車20分鐘直達。如果早上想避開市區人潮，可以來看世界最大的青銅臥佛，感受寧靜震撼的洗禮。不想跑遠就睡到自然醒！
                             </p>
-                            <p>🌸 <strong>下午：舞鶴公園櫻花祭典</strong> <strong class="text-pink-600">(福岡已於3/29滿開，今日確認為絕美「櫻吹雪」與粉紅花毯)</strong></p>
+                            <p>🌸 <strong>下午：舞鶴公園櫻花祭典</strong> <strong class="text-pink-600">(最新預測：福岡3/29滿開，今日去剛好是絕美「櫻吹雪」與粉紅花毯)</strong></p>
                             <p>🍔 體驗餐車市集 / 天神地下街購物</p>
                         </div>
                     </div>
@@ -404,7 +399,35 @@
                     </div>
                 </div>
 
-                <!-- 04/07 -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col sm:flex-row relative hover:shadow-md transition-shadow">
+                    <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-pink-400"></div>
+                    <div class="bg-slate-50/50 w-full sm:w-36 flex sm:flex-col justify-between sm:justify-start items-center sm:items-start p-3 sm:p-4 border-b sm:border-b-0 sm:border-r border-slate-100 pl-4 sm:pl-5">
+                        <div class="flex items-baseline gap-2 sm:block">
+                            <div class="font-mono font-bold text-xl text-slate-700 tracking-tight">04/06</div>
+                            <div class="text-xs font-bold text-red-500 uppercase">Mon</div>
+                        </div>
+                        <div class="flex items-center gap-2 sm:mt-2">
+                            <span class="text-sm font-bold text-slate-600">福岡</span>
+                            <span class="px-2 py-0.5 bg-pink-100 text-pink-600 rounded text-[10px] font-bold">補假</span>
+                        </div>
+                    </div>
+                    <div class="p-4 sm:p-5 flex-1">
+                        <div class="font-bold text-purple-700 text-base mb-1.5 leading-snug">🚣 柳川 (Yanagawa) 一日遊</div>
+                        <div class="text-slate-500 text-sm space-y-1.5 leading-relaxed">
+                            <p><span class="bg-yellow-100 text-yellow-800 px-1.5 py-0.5 rounded text-[10px] font-bold mr-1">套票</span> 西鐵柳川特惠套票 (Toku Toku)</p>
+                            <p class="text-xs text-slate-500 pl-4 border-l-2 border-yellow-200 ml-1 mb-2 bg-yellow-50/50 p-2 rounded-r">
+                                💡 <span class="font-bold">購票秘訣：</span>出發前直接到<strong class="text-slate-700">「西鐵福岡(天神)站」2樓的站長室/人工售票窗口</strong>購買。必須當天買，直接跟站務員說 "Yanagawa Toku Toku Ticket" 即可！
+                            </p>
+                            <p>🚣 上午：平日遊柳川超清幽，午餐必吃蒸籠鰻魚飯</p>
+                            <p>🛍️ 下午：悠閒返回福岡市區，逛天神商圈或大濠公園周邊咖啡廳</p>
+                        </div>
+                    </div>
+                    <div class="bg-slate-50 w-full sm:w-32 p-3 sm:p-4 border-t sm:border-t-0 sm:border-l border-slate-100 flex flex-row sm:flex-col justify-between sm:justify-center items-center sm:items-end shrink-0">
+                        <div class="text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-0 sm:mb-1">Stay</div>
+                        <div class="font-bold text-sm text-purple-700 text-right">Comfort</div>
+                    </div>
+                </div>
+
                 <div id="kumamoto" class="scroll-mt-6"></div>
                 <div class="bg-red-50/30 rounded-xl shadow-sm border border-red-100 overflow-hidden flex flex-col sm:flex-row relative hover:shadow-md transition-shadow">
                     <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-red-400"></div>
@@ -551,7 +574,7 @@
                             <p><span class="font-bold text-green-700 bg-green-50 px-2 py-0.5 rounded-md inline-flex items-center gap-1"><i class="fas fa-check-circle text-green-500"></i> KKday 已預訂</span></p>
                             <p>🚩 <strong class="text-slate-700">07:50 熊本站西口集合</strong> (從飯店搭市電約15-20分，建議 07:15 出門)</p>
                             <p>🌲 景點：草千里、火山口、<strong>上色見熊野座神社</strong>、<strong>黑川溫泉秘境</strong></p>
-                            <p class="mt-1"><span class="bg-pink-100 text-pink-800 px-1.5 py-0.5 rounded text-[10px] font-bold mr-1">3/24最終預測</span> <strong class="text-pink-600">阿蘇山區預計於 4/10 達到滿開，今天去剛好是 100% 極致爆發期！</strong></p>
+                            <p class="mt-1"><span class="bg-pink-100 text-pink-800 px-1.5 py-0.5 rounded text-[10px] font-bold mr-1">3/26最新預測</span> <strong class="text-pink-600">阿蘇山區預計於 4/10 達到滿開，今天去剛好是 100% 極致爆發期！</strong></p>
                             <p>🍱 午餐：避開赤牛丼，改吃 <strong class="text-red-600">阿蘇高菜飯配烤地雞</strong></p>
                         </div>
                     </div>
@@ -872,15 +895,17 @@
                     <div class="w-8 h-8 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center font-bold"><i class="fas fa-suitcase"></i></div>
                     <div class="flex-1">
                         <div class="font-bold">打包：注意要帶的東西</div>
-                        <div class="text-xs text-slate-500 mt-1">
-                            • 1.5M 延長線<br>
-                            • 隨身雨傘<br>
+                        <div class="text-xs text-slate-500 mt-1 leading-relaxed">
+                            <span class="text-green-600 font-bold">✓ 1.5M 延長線</span><br>
+                            <span class="text-green-600 font-bold">✓ 滑鼠電池</span><br>
+                            <span class="text-green-600 font-bold">✓ 手錶充電頭</span><br>
+                            • 隨身雨傘 (放隨身包)<br>
                             • 洗衣精 (旅行裝/洗衣球)<br>
-                            • 眼鏡<br>
-                            • 清洗維持器<br>
-                            • 滑鼠電池<br>
+                            • 眼鏡 / 清洗維持器<br>
                             • 瑜珈鋪巾<br>
-                            • 手錶充電頭
+                            <span class="text-rose-600 font-bold">❗ 新增：韓國轉接頭 (雙圓孔 220V)</span><br>
+                            <span class="text-rose-600 font-bold">❗ 新增：筆電電源線</span><br>
+                            <span class="text-rose-600 font-bold">❗ 新增：隨身原子筆、腸胃藥/止痛藥、環保袋</span>
                         </div>
                     </div>
                     <i class="far fa-square text-lg text-slate-300"></i>
@@ -894,7 +919,6 @@
 
     </div>
 
-    <!-- Mobile Bottom Navigation (Visible only on small screens) -->
     <nav class="sm:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)] z-50 pb-safe">
         <ul class="flex justify-around items-center h-16">
             <li class="flex-1">
